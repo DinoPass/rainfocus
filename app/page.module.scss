@@ -1,0 +1,340 @@
+
+@use "../styles/tokens" as *;
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 56px 214px minmax(0, 1fr);
+  background: $color-text-inverse;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: $main-content-padding-top $main-content-padding-left;
+  background: $color-text-inverse;
+}
+
+.eventHeader {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: $space-16;
+
+  .editEventButton {
+    width: $button-edit-width;
+    height: $button-edit-height;
+    margin-left: auto;
+    padding: $button-edit-padding-y $button-edit-padding-x;
+    background-color: $color-action-primary;
+    border: none;
+    border-radius: $radius-sm;
+    font-weight: $font-weight-button;
+    color: $color-text-inverse;
+    cursor: pointer;
+
+  }
+}
+
+.eventLogo {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.eventHeading {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.eventSetup {
+  margin: $space-40 0 $space-16 0;
+  color: $color-text-heading;
+  font-size: $font-size-section-title;
+  line-height: $line-height-subtext;
+}
+
+.eventSetupInfo {
+  line-height: $line-height-subtext;
+  color: $color-text-body;
+  font-size: $font-size-subtext;
+}
+
+.sectionDivider {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid $color-border-divider;
+  margin: $guide-body-gap-to-divider 0 0;
+}
+
+.attendeeSection {
+  width: 100%;
+}
+
+.attendeeHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: $divider-gap-to-attendee-row;
+}
+
+.attendeeIcon {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.attendeeTitle {
+  margin: 0;
+  color: $color-text-heading;
+  font-size: $font-size-attendee-title;
+  font-weight: $font-weight-attendee-title;
+  line-height: 1.2;
+}
+
+.stepLabel {
+  margin: $attendee-row-gap-to-step-1 0 $step-label-gap-to-card;
+  color: $color-text-muted;
+  font-size: $font-size-step-label;
+  font-weight: $font-weight-step-text;
+  line-height: 1.4;
+
+  strong {
+    color: $color-text-heading;
+    font-weight: $font-weight-step-label;
+  }
+}
+
+.stepOneCard {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  max-width: $step-1-card-width;
+  min-height: $step-1-card-height;
+  padding: $card-padding;
+  border: 1px solid $color-border-card;
+  border-radius: $radius-sm;
+  background: $color-text-inverse;
+  column-gap: $space-24;
+}
+
+.stepOneColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stepOneHeading {
+  margin: 0 0 4px;
+  color: $color-text-heading;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.stepOneText {
+  margin: 0;
+  color: $color-text-muted;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.workflowGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, $step-card-width));
+  gap: $space-16;
+  width: 100%;
+  
+}
+
+.eventTitle {
+  margin: 0;
+  color: $color-text-heading;
+  font-size: $font-size-page-title;
+  font-weight: $font-weight-page-title;
+  line-height: 1.1;
+}
+
+.eventDate,
+.eventLocation {
+  margin: 0;
+  color: $color-text-body;
+  font-size: $font-size-subtext;
+  font-weight: $font-weight-subtext;
+  line-height: $line-height-subtext;
+}
+
+.gutter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid $color-border-divider;
+  min-height: 100vh;
+  padding-top: 12px;
+
+  .gutterSmall {
+    display: block;
+    margin: 10px 0 24px;
+    cursor: pointer;
+  }
+
+  .gutterLogo {
+    display: block;
+    cursor: pointer;
+  }
+}
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid $color-border-divider;
+  padding: 16px 10px 24px;
+}
+
+.sidenavHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.sidenavTitle {
+  margin: 0 0 10px;
+  color: $color-text-heading;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.sidenavMeta {
+  margin: 0;
+  color: $color-text-heading;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navListItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.navButton,
+.navButtonActive {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 28px;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.navButtonActive {
+  min-height: 28px;
+  padding: 0 8px;
+  border-radius: 8px;
+  background: rgba(92, 0, 220, 0.08);
+}
+
+.navDot {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  border-radius: 50%;
+  background: #8b8b8b;
+}
+
+.navDotActive {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  border-radius: 50%;
+  background: $color-action-primary;
+}
+
+.navLabel {
+  color: $color-text-muted;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.navLabelActive {
+  color: $color-action-primary;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.subnavList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0 0 0 32px;
+  list-style: none;
+}
+
+.subnavItem {
+  color: $color-text-muted;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.initialAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-top: auto;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: #4b4b4b;
+  color: $color-text-inverse;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .gutter,
+  .sidenav {
+    display: none;
+  }
+
+  .main {
+    padding: $space-24;
+  }
+
+  .stepOneCard {
+    grid-template-columns: 1fr;
+    row-gap: $space-16;
+  }
+
+  .workflowGrid {
+    grid-template-columns: 1fr;
+  }
+}
