@@ -119,11 +119,11 @@ export default function Home() {
             className={styles.eventLogo}
             src="/assets/Logo.svg"
             alt="RainFocus mark"
-            width={64}
-            height={64}
+            width={95}
+            height={95}
           />
           <div className={styles.eventHeading}>
-            <h1 className={styles.eventTitle}>RainFocus Summit</h1>
+            <h3 className={styles.eventTitle}>RainFocus Summit</h3>
             <p className={styles.eventDate}>December 15th</p>
             <p className={styles.eventLocation}>Lehi, Utah</p>
           </div>

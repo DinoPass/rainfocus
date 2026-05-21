@@ -77,7 +77,7 @@
 .attendeeHeader {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 23px;
   margin-top: $divider-gap-to-attendee-row;
 }
 
@@ -153,7 +153,7 @@
   margin: 0;
   color: $color-text-heading;
   font-size: $font-size-page-title;
-  font-weight: $font-weight-page-title;
+  font-weight: 300;
   line-height: 1.1;
 }
 
@@ -165,6 +165,10 @@
   font-weight: $font-weight-subtext;
   line-height: $line-height-subtext;
 }
+
+.eventDate {
+  margin-top: 16px;
+  }
 
 .gutter {
   display: flex;
@@ -211,7 +215,7 @@
   margin: 0;
   color: $color-text-heading;
   font-size: 10px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.4;
 }
 
@@ -271,7 +275,7 @@
 .navLabel {
   color: $color-text-muted;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -294,7 +298,7 @@
 .subnavItem {
   color: $color-text-muted;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -411,7 +415,7 @@
   }
 
   .attendeeHeader {
-    gap: 6px;
+    gap: 8px;
   }
 
   .attendeeIcon {
