@@ -56,3 +56,11 @@
 .cardInteractive {
   cursor: pointer;
 }
+
+@media (max-width: 640px) {
+  .card,
+  .cardAdd {
+    min-height: auto;
+    padding: $space-16;
+  }
+}
